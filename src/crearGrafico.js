@@ -11,7 +11,7 @@ var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("data.tsv", function(d) {
+d3.json("suicide-squad.json", function(d) {
   d.rank = +d.rank;
   return d;
 }, function(error, data) {
@@ -43,4 +43,5 @@ d3.tsv("data.tsv", function(d) {
       .attr("y", function(d) { return y(d.rank); })
       .attr("width", x.bandwidth())
       .attr("height", function(d) { return height - y(d.rank); });
+    }
 }
