@@ -5,11 +5,11 @@
         
       </div>
       <nav>
-        <a href="#/">Home</a>
-        <a href="#/vueLineChart">Prueba Nueva</a>
-        <a href="#/actors">Ranking TipoA</a>
-        <a href="#/newActor">Ranking TipoB</a>
-        <a href="#/prueba">Ranking TipoC</a>
+        <a href="#/">Home </a>
+        <a href="#/graficoPorCanal">Gráficos por Canal</a>
+        <a href="#/graficoNoticias">Gráfico Noticias</a>
+        <a href="#/graficoTeleseries">Gráfico Teleseries</a>
+        <a href="#/graficoMatinales">Gráfico Matinales</a>
       </nav>
     </header>
 

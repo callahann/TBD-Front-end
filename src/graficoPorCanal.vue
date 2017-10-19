@@ -1,20 +1,17 @@
 <template>
   <div class="center">
     <h2>{{title}}</h2>
-    <ul class="user-list">
-      <li v-for="u,i in users">
-        <img :src="'https://robohash.org/'+i+'?size=50x50'" />
-        <span>{{u.firstName}} {{u.lastName}}</span>
-        <span class="date">{{Date(u.lastUpdate)}}</span>
-      </li>
-    </ul>
+    <p><button href="#/">TVN</button></p>
+    <p><button href="#/">MEGA</button></p>
+    <p><button href="#/">Canal 13</button></p>
+    <p><button href="#/">Chilevisión</button></p>
   </div>
 </template>
 <script>
 export default {
   data(){
     return{
-      title:'Actores',
+      title:'Selecciona un canal',
       users:[]
     }
   },

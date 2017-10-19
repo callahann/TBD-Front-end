@@ -1,5 +1,7 @@
 <template>
-  <div class="svg-line-container" id="bCanvas"></div>
+  <div class="svg-line-container" id="bCanvas">
+    <h2 class="center">Gráfico de Noticias</h2>
+  </div>
 </template>
 
 <script>
@@ -24,7 +26,7 @@ export default {
     data: {
       default: function () { 
         return {
-        	
+          
         }
         
       }
@@ -36,7 +38,7 @@ export default {
     }
   },
   mounted () {
-  	console.log('Index.vue');
+    console.log('Index.vue');
 
     // GET /someUrl
     this.$http.get('http://localhost:8090/TBDTaller1/actors')
@@ -132,7 +134,7 @@ export default {
         .attr("x", width / 2 + 60)
         .text(labelTwo)
         .attr("fill", "black")
-    	}
+      }
   },
   watch: {
     labelOne: {

@@ -1,7 +1,6 @@
 <template>
 <div class="center">
   <h2>{{title}}</h2>
-    <img class="logo-big" src="./img/vue-logo.png" />
     <p>
       Sprint 1
     </p>
