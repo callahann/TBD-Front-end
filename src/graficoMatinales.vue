@@ -26,7 +26,7 @@ export default {
     data: {
       default: function () { 
         return {
-        	
+          
         }
         
       }
@@ -38,12 +38,13 @@ export default {
     }
   },
   mounted () {
-  	console.log('Index.vue');
+    console.log('Index.vue');
 
     // GET /someUrl
-    this.$http.get('http://localhost:8090/TBDTaller1/actors')
+    this.$http.get('http://localhost:8090/Tingeso1/students')
     .then(response=>{
        // get body data
+       console.log('data', response.data);
       this.createLine('#bCanvas', response.data, this.labelOne, this.colorOne, this.labelTwo, this.colorTwo);
     }, response=>{
        // error callback
@@ -64,7 +65,7 @@ export default {
         .classed("svg-content", true)
         .append("svg:g")
       var x = d3.scaleBand()
-        .domain(d3.entries(csv).map(function (d) { return d.value.firstName}))
+        .domain(d3.entries(csv).map(function (d) { return d.value.name}))
         .rangeRound([0, width]).padding(0.2)
       var y = d3.scaleLinear()
         //.domain([0, d3.max(csv, function (d) {return d.dollars})])
@@ -84,26 +85,17 @@ export default {
         .attr('class', 'spark-x axis')
         .attr("transform", "translate(" + margins.left + "," + height + ")")
         .call(xAx)
-      canvas.selectAll(".actorId").data(d3.entries(csv))
+      canvas.selectAll(".studentId").data(d3.entries(csv))
         .enter()
         .append("rect")
         .attr("transform", "translate(" + margins.left + ",0)")
-        .attr('class', 'actorId')
-        .attr("x", function (d) { return x(d.value.firstName) })
+        .attr('class', 'studentId')
+        .attr("x", function (d) { return x(d.value.name) })
         .attr("width", x.bandwidth()/10 )
-        .attr("y", function (d) { return y(d.value.actorId) })
-        .attr("height", function (d) { return height - y(d.value.actorId) })
+        .attr("y", function (d) { return y(d.value.studentId) })
+        .attr("height", function (d) { return height - y(d.value.studentId) })
         .style( "fill", colorOne )
-      var bar = canvas.selectAll(".actor").data(d3.entries(csv))
-        .enter()
-        .append("rect")
-        .attr("transform", "translate(" + margins.left + ",0)")
-        .attr("class", "actor")
-        .attr("x", function(d) { return x(d.value.firstName) + x.bandwidth()/10 })
-        .attr("width", x.bandwidth()/10 + algo)
-        .attr("y", function(d) { return y(d.value.actorId); })
-        .attr("height", function(d) { return height - y(d.value.actorId); })
-        .style( "fill", colorTwo )
+                                                          
       canvas
         .append("rect")
         .attr("y", 200)
@@ -119,22 +111,8 @@ export default {
         .attr("x", width / 2 - 40)
         .text(labelOne)
         .attr("fill", "black")
-      canvas
-        .append("rect")
-        .attr("y", 200)
-        .attr("x", width / 2 + 50)
-        .attr("transform", "translate(0,-8)")
-        .attr("width", 8)
-        .attr("height", 8)
-        .style( "fill", colorTwo )
-      canvas
-        .append("text")
-        .attr("class", "spark-text")
-        .attr("y", 200)
-        .attr("x", width / 2 + 60)
-        .text(labelTwo)
-        .attr("fill", "black")
-    	}
+      
+      }
   },
   watch: {
     labelOne: {
