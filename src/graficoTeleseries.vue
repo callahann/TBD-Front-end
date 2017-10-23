@@ -21,7 +21,7 @@ export default {
       default : 'Frecuencia'
     },
     colorTwo: {
-      default: '#d3d3d3'
+      default: '#4682b4'
     },
     data: {
       default: function () { 
