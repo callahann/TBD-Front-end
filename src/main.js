@@ -5,7 +5,8 @@ import graficoPorCanal from './graficoPorCanal.vue';
 import graficoNoticias from './graficoNoticias.vue';
 import VueResource from 'vue-resource';
 import graficoTeleseries from './graficoTeleseries.vue';
-import graficoMatinales from './graficoMatinales.vue'
+import graficoMatinales from './graficoMatinales.vue';
+import agregarNuevoPrograma from './agregarNuevoPrograma.vue'
 require("./style.scss");
 
 import App from './App.vue';
@@ -16,7 +17,8 @@ const routes = [
   { path:'/graficoPorCanal', component: graficoPorCanal}, 
   { path: '/graficoNoticias', component: graficoNoticias},
   { path: '/graficoTeleseries', component: graficoTeleseries},
-  { path: '/graficoMatinales', component: graficoMatinales}
+  { path: '/graficoMatinales', component: graficoMatinales},
+  { path: '/agregarNuevoPrograma', component: agregarNuevoPrograma}
 ]
 
 // Create the router instance and pass the `routes` option

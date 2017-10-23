@@ -10,6 +10,7 @@
         <a href="#/graficoNoticias">Gráfico Noticias</a>
         <a href="#/graficoTeleseries">Gráfico Teleseries</a>
         <a href="#/graficoMatinales">Gráfico Matinales</a>
+        <a href="#/agregarNuevoPrograma">Agregar Nuevo Programa</a>
       </nav>
     </header>
 
